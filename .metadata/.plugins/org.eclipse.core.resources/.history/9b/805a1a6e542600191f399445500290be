@@ -22,21 +22,6 @@ public class StarsRunner
 	   ref.printTwentyStars();
 	   ref.printTwentyDashes();
 	   ref.printABigBox();
-	   ref.printTwentyDashes();
-	   ref.printTwentyStars(); 
-	   ref.printTwentyDashes();
-	   ref.printTwentyStars();
-	   ref.printTwentyDashes();
-	   ref.printTwentyStars();
-	   ref.printTwentyDashes();
-	   ref.printTwentyStars(); 
-	   ref.printTwentyDashes();
-	   ref.printTwentyStars();
-	   ref.printTwentyDashes();
-	   ref.printASmallBox();
-	   ref.printASmallBox();
-	   
-	   
 	   
 	   
    }

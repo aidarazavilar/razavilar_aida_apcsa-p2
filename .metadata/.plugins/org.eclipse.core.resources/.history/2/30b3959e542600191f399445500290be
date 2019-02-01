@@ -33,10 +33,6 @@ public class StarsRunner
 	   ref.printTwentyDashes();
 	   ref.printTwentyStars();
 	   ref.printTwentyDashes();
-	   ref.printASmallBox();
-	   ref.printASmallBox();
-	   
-	   
 	   
 	   
    }
