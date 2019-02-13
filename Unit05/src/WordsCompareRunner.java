@@ -12,7 +12,9 @@ public class WordsCompareRunner
 {
    public static void main( String args[] )
    {
-		//add test cases
+		WordsCompare runner = new WordsCompare("zanny", "zane");
+		runner.compare(); 
+		System.out.println(runner.toString());
 
 	}
 }

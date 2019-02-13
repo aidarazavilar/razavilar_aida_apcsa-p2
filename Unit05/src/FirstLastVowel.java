@@ -8,6 +8,15 @@ public class FirstLastVowel
 {
    public static String go( String a )
 	{
-		return "add code here";
+	   String vowels = "aeiouAEIOU";
+	   if (vowels.contains(a.substring(0,1))|| (vowels.contains(a.substring(a.length()-1))))
+	   {
+		return "yes";
+	   }
+		
+		else 
+		{
+			return "no";
+		}
 	}
 }
