@@ -44,14 +44,44 @@ public class Magpie3
 				|| findKeyword(statement, "brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+
+	    }
+		else if (findKeyword(statement, "dog") >= 0
+					|| findKeyword(statement, "cat") >= 0
+					|| findKeyword(statement, "fish") >= 0
+					|| findKeyword(statement, "hamster") >= 0)
+		{
+			response = "Tell me more about your pets.";
+		}
+		else if (findKeyword(statement,"Mauro") >= 0)
+		{
+		response = "He is a great teacher!";
+		}
+		else if (findKeyword(statement, "Chloe") >= 0)
+		{
+		response = "She is nice!";
+		}
+		else if (findKeyword(statement, "Tahoe") >= 0)
+		{
+		response = "He is cute!";
+		}
+		else if (findKeyword(statement, "Julie") >= 0)
+		{
+		response = "Loves Robert Downey Jr.!";
+		}
+		else if (findKeyword(statement, "no") >= 0)
+		{
+		response = "Why so negative?";
 		}
 		else
 		{
-			response = getRandomResponse();
+		response = getRandomResponse();
 		}
-		return response;
-	}
+		
 
+		return response;
+		
+	}
 	/**
 	 * Search for one word in phrase. The search is not case
 	 * sensitive. This method will check that the given goal

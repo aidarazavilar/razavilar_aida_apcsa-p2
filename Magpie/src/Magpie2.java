@@ -31,22 +31,57 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
-		if (statement.indexOf("no") >= 0)
+		if (statement.trim().length() == 0)
 		{
-			response = "Why so negative?";
-		}
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0)
-		{
-			response = "Tell me more about your family.";
+			response = " Please say something, I'm giving up on you!";     
 		}
 		else
-		{
+			{
+			if (statement.indexOf("mother") >= 0
+					|| statement.indexOf("father") >= 0
+					|| statement.indexOf("sister") >= 0
+					|| statement.indexOf("brother") >= 0)
+			{
+			
+			response = "Tell me more about your family.";
+			
+		    }
+			else if (statement.indexOf("dog") >= 0
+						|| statement.indexOf("cat") >= 0
+						|| statement.indexOf("fish") >= 0
+						|| statement.indexOf("hamster") >= 0)
+			{
+				response = "Tell me more about your pets.";
+			}
+			else if (statement.indexOf("Mauro") >= 0)
+			{
+			response = "He is a great teacher!";
+			}
+			else if (statement.indexOf("Chloe") >= 0)
+			{
+			response = "She is nice!";
+			}
+			else if (statement.indexOf("Tahoe") >= 0)
+			{
+			response = "He is cute!";
+			}
+			else if (statement.indexOf("Julie") >= 0)
+			{
+			response = "Loves Robert Downey Jr.!";
+			}
+			else if (statement.indexOf("no") >= 0)
+			{
+			response = "Why so negative?";
+			}
+			else
+			{
 			response = getRandomResponse();
-		}
-		return response;
+			}
+			
+			}
+			return response;
+			
+			
 	}
 
 	/**
@@ -55,7 +90,7 @@ public class Magpie2
 	 */
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 4;
+		final int NUMBER_OF_RESPONSES = 6;
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
@@ -75,6 +110,18 @@ public class Magpie2
 		else if (whichResponse == 3)
 		{
 			response = "You don't say.";
+		}
+		else if (whichResponse == 4)
+		{
+			response = "Wow, tell my more: so fascinating.";
+		}
+		else if (whichResponse == 5)
+		{
+			response = "Cool story bro.";
+		}
+		else if (whichResponse == 6)
+		{
+			response = "I didn't know that!";
 		}
 
 		return response;
