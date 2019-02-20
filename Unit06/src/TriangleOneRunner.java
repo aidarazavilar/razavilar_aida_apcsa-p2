@@ -4,10 +4,16 @@
 
 import static java.lang.System.*;
 
+import java.util.Scanner;
+
 public class TriangleOneRunner
 {
 	public static void main ( String[] args )
 	{
-		//add test cases		
+		Scanner keyboard = new Scanner(System.in);
+		out.print("Give me a word: ");
+		String word = keyboard.nextLine();
+		TriangleOne testers = new TriangleOne(word);
+		testers.print();
 	}
 }

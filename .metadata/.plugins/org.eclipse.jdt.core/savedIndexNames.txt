@@ -3,7 +3,6 @@ INDEX VERSION 1.131+/Users/aida/Desktop/GitHub/APCSA2019/razavilar_aida_apcsa-p2
 609331307.index
 3701463317.index
 3637929226.index
-3690077452.index
 1123765430.index
 2309822661.index
 3969190818.index
