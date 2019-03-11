@@ -38,7 +38,7 @@ public class MilesPerHour
 
 	public void calcMPH()
 	{
-	    mph = 0;
+	    mph = 0.0;
 		mph = (double) distance / (double)(hours+ minutes/60);
 		
 	}
