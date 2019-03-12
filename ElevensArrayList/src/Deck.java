@@ -12,7 +12,7 @@ public class Deck {
 	 * cards contains all the cards in the deck.
 	 */
 	//private List<Card> cards;
-	private Card[] cards;
+	private List<Card> cards;
 
 	/**
 	 * size is the number of not-yet-dealt cards.
@@ -34,7 +34,7 @@ public class Deck {
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 		
-		cards = new Card[suits.length*ranks.length];
+		cards = new ArrayList<Card>();
 		
 		int x =0;
 		
@@ -42,12 +42,12 @@ public class Deck {
 		{
 			for (int count=0; count<suits.length; count++ )
 			{
-				cards[x] = new Card(ranks[num], suits[count], values[num]);
+				cards.add(new Card(ranks[num], suits[count], values[num]));
 					x++;	
 				
 			}
 		}
-		size = cards.length;
+		size = cards.size();
 		shuffle();
 		
 	}
@@ -84,17 +84,17 @@ public class Deck {
 	 */
 	public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
-		for (int k=cards.length-1; k>0; k--)
+		for (int k=cards.size()-1; k>0; k--)
 		{
 			int x = (int)(Math.random()*(k+1));	
 
-			Card temp= cards[x]; 
-			cards[x]= cards[k];
-			cards[k]= temp;
+			Card temp= cards.get(x); 
+			cards.set(x, cards.get(k));
+			cards.set(k,temp);
 			
 		}
 		
-		size=cards.length;
+		size=cards.size();
 	}
 
 	/**
@@ -107,7 +107,7 @@ public class Deck {
 		if (size > 0)
 		{
 			size--;
-			return cards[size];
+			return cards.get(size);
 		}
 		else
 		{
@@ -124,7 +124,7 @@ public class Deck {
 		String rtn = "size = " + size + "\nUndealt cards: \n";
 
 		for (int k = size - 1; k >= 0; k--) {
-			rtn = rtn + cards[k];
+			rtn = rtn + cards.get(k);
 			if (k != 0) {
 				rtn = rtn + ", ";
 			}
@@ -135,12 +135,12 @@ public class Deck {
 		}
 
 		rtn = rtn + "\nDealt cards: \n";
-		for (int k = cards.length - 1; k >= size; k--) {
-			rtn = rtn + cards[k];
+		for (int k = cards.size() - 1; k >= size; k--) {
+			rtn = rtn + cards.get(k);
 			if (k != size) {
 				rtn = rtn + ", ";
 			}
-			if ((k - cards.length) % 2 == 0) {
+			if ((k - cards.size()) % 2 == 0) {
 				// Insert carriage returns so entire deck is visible on console.
 				rtn = rtn + "\n";
 			}
