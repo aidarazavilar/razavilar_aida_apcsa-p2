@@ -33,7 +33,7 @@ public class Doggies
 		int old = 0;
 		for(int x = 0;x < pups.length;x++)
 		{
-			if (pups[x].getAge() > pups[x+1].getAge())
+			if (pups[old].getAge() < pups[x].getAge())
 			{
 				old = x;
 			}
@@ -48,7 +48,7 @@ public class Doggies
 		for(int x = 0;x<pups.length;x++)
 			
 		{
-			if (pups[x].getAge() < pups[x+1].getAge())
+			if (pups[young].getAge() > pups[x].getAge())
 			{
 				young = x;
 			}

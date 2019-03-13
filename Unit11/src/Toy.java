@@ -18,6 +18,7 @@ public class Toy
 	public Toy( String nm )
 	{
 		setName(nm);
+		setCount(0);
 	}
 	
 	public int getCount()
