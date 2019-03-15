@@ -19,45 +19,28 @@ public class ToyStore
 
 	public void loadToys( String toys )
 	{
-		String list = toys;
-		int loc =list.indexOf(' ');
-		String currentToy= "";
-		
-		int spot =0;
-		
-		while (loc > -1)
+		if (toyList.size() > 0)
 		{
-			currentToy = (list.substring(0, loc));
-			
-			if (toyList.size() > 0)
+			if (getThatToy(toys) != null )
 			{
-				for (int x = 0; x < toyList.size(); x++)
-				{
-					if (getThatToy(currentToy) != null)
-					{
-						int count = getThatToy(currentToy).getCount();
-						toyList.get(x).setCount(count+1);
-					}
-					else
-					{
-						Toy toy = new Toy(currentToy);
-						toy.setCount(1);
-						toyList.add(spot, toy);
-						spot++;
-					}
-				}
+				int count = getThatToy(toys).getCount();
+				getThatToy(toys).setCount(count+1);
 			}
-			else 
+			else
 			{
-				Toy toy = new Toy(currentToy);
-				toyList.add(spot, toy);
-				toy.setCount(toy.getCount()+1);
-				spot++;
+				Toy toy = new Toy(toys);
+				toy.setCount(1);
+				toyList.add(toy);
 			}
-			
-			list = list.substring(loc+1);
-			loc = list.indexOf(' ');
 		}
+		else 
+		{
+			Toy toy = new Toy(toys);
+			toyList.add(toy);
+			toy.setCount(toy.getCount()+1);
+		}
+		
+		sortToysByCount();
 	}
 	
   
@@ -73,19 +56,37 @@ public class ToyStore
   
   	public String getMostFrequentToy()
   	{
-  		for (int x = 0; x < toyList.size(); x++)
+  		int most = 0;
+  		
+  		for (int x = 1; x < toyList.size(); x++)
   		{
-  			
+  			if (toyList.get(x).getCount() > toyList.get(most).getCount())
+  			{
+  				most = x;
+  			}
   		}
-  		return "";
-  	}  
+  		return toyList.get(most).getName();
+  	}   
   
   	public void sortToysByCount()
   	{
-  	}  
+  		int most = toyList.size() - 1;
+  		Toy current;
+
+  		for (int x = 0; x < toyList.size()-1; x++)
+  		{
+  			if (toyList.get(x).getCount() > toyList.get(most).getCount())
+  			{
+  				current = getThatToy(toyList.get(most).getName());
+  				toyList.set(most, getThatToy(toyList.get(x).getName()));
+  				toyList.set(x, current);
+  			}
+  		}
+  	}    
   	  
 	public String toString()
-	{
-		 return ""+toyList;
+    {
+		
+	    return ""+toyList + "\n max == " + getMostFrequentToy();
 	}
 }
