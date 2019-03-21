@@ -13,6 +13,7 @@ public class WordRunner
 	public static void main( String args[] ) throws IOException
 	{
 		Scanner file = new Scanner(new File("words.dat"));
+		String output = "";
 
 		int size = file.nextInt();
 		file.nextLine();
