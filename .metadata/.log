@@ -1404,3 +1404,26 @@ java.net.UnknownHostException: download.eclipse.org
 	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
 	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2019-03-26 15:54:39.680 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/aida/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/aida/.eclipse_keyring
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-03-26 15:54:45.984
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.poll.PollNewsFeedsHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-03-26 15:54:45.987
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.read.ReadNewsItemsHandler
+
+!ENTRY org.eclipse.core.net 1 0 2019-03-26 15:54:46.781
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-03-26 15:54:51.955
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-03-26 15:54:52.938
+!MESSAGE Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+'
