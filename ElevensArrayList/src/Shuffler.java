@@ -63,11 +63,14 @@ public class Shuffler {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
 		int [] shuffled = new int[values.length];
 		int k =0;
-		int max= values.length/2;
+		
+		int max = values.length/2;
+		
 		if (max%2 != 0)
 		{
 			max = (values.length+1)/2;
 		}
+		
 		for (int j=0; j<max; j++)
 		{
 		 shuffled[k]=values[j];
@@ -75,6 +78,7 @@ public class Shuffler {
 		}
 		
 		k=1;
+		
 		for (int j=max; j<values.length; j++)
 		{
 			shuffled[k]=values[j];
@@ -100,7 +104,7 @@ public class Shuffler {
 	 */
 	public static void selectionShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
-		int[] shuffled= new int[] {values.length};
+		int[] shuffled= new int[values.length];
 		
 		for (int k=values.length-1; k>0; k--)
 		{

@@ -35,15 +35,13 @@ public class Deck {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 		
 		cards = new ArrayList<Card>();
-		
-		int x =0;
+	
 		
 		for (int num=0; num<ranks.length; num++)
 		{
 			for (int count=0; count<suits.length; count++ )
 			{
-				cards.add(new Card(ranks[num], suits[count], values[num]));
-					x++;	
+				cards.add(new Card(ranks[num], suits[count], values[num]));	
 				
 			}
 		}
