@@ -73,6 +73,14 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testFixUnderwater()
+  {
+    Picture caterpillar = new Picture("water.jpg");
+    caterpillar.explore();
+    caterpillar.fixUnderwater();
+    caterpillar.explore();
+  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -175,7 +183,7 @@ public class PictureTester
   public static void testEdgeDetection()
   {
     Picture swan = new Picture("swan.jpg");
-    swan.edgeDetection(10);
+    swan.edgeDetection2(10);
     swan.explore();
   }
   
@@ -201,8 +209,9 @@ public class PictureTester
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
+	//testMyCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();

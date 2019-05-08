@@ -574,7 +574,7 @@ public void mirrorDiagonal()
        
        if (leftPixel.colorDistance(botColor) > edgeDist)
          {
-       	leftPixel = pixelsTwo[row][col];
+    	   leftPixel = pixelsTwo[row][col];
            leftPixel.setColor(Color.BLACK);
          }
          else
