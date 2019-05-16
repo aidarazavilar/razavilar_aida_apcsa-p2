@@ -21,6 +21,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 	private Alien alienTwo;
    private AlienHorde horde;
 	private Bullets shots;
+	private int bull=0;
 	
 	private boolean gameOver;
 	private boolean dead;
@@ -95,12 +96,22 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 			if(ship.getY() < 500 && !gameOver) ship.move("DOWN");
 		}
 		
+		
 		if(keys[4] == true)
 		{
 			//Shoot bullets
-			Ammo ammo = new Ammo(ship.getX() + 20,ship.getY() - 10,3);
-			shots.add(ammo);
-			keys[4] = false;
+			if (bull<25) {
+				Ammo ammo = new Ammo(ship.getX() + 20,ship.getY() - 10,3);
+				shots.add(ammo);
+				keys[4] = false;
+				bull++;
+				System.out.println("Bullets Left " + (25-bull));
+			}
+			else {
+				gameOver=true;
+			}
+		
+			
 		}
 		
 		shots.drawEmAll(graphToBack);
